@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <title>테이블 태그</title>
+</head>
+<body>
+    <table border = 1>
+        <caption>Caption</caption>
+        <colgroup>
+            <col span = "1" style="background:red" />
+            <col style = "background: rgb(0, 204, 255)" />    
+            <col style = "background: pink" />
+        </colgroup>
+        <thead style = "background:green">
+            <tr>
+                <th>Table Header</th>
+                <th>Table Header</th>
+                <th>Table Header</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+            </tr>
+            <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+            </tr>
+            <tr><td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+            </tr>
+        </tbody>
+        <tfoot style = "background:yellow">
+            <td>Table Data</td>
+            <td>Table Data</td>
+            <td>Table Data</td>
+        </tfoot>
+    </table>
+    <br />
+    <table border = "1">
+        <tr>
+            <th colspan="3">Table Data</th>
+            <th rowspan="3">Table Data</th>
+        </tr>        
+            <td>Table Data</td>
+            <td rowspan = "2">Table Data</td>
+            <td>Table Data</td>
+        </tr>
+        <tr>
+            <td>Table Data</td>
+            <td>Table Data</td>
+        </tr>
+    </table>
+</body>
+</html>
