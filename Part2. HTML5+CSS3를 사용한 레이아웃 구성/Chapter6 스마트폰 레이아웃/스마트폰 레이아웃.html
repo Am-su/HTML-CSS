@@ -75,7 +75,24 @@
         }
     </style>
     <!--내비게이션(1)-->
-    <style></style>
+    <style>
+        #top_gnb{
+            overflow:hidden;
+            border-bottom:1px solid black;
+            background:#B42111;
+        }
+        #top_gnb>div>a{
+            /* 수평 정렬 */
+            float:left; width:25%;
+
+            /* 크기 및 색상 정렬 */
+            height:35px;
+            line-height:35px;
+            text-align:center;
+            color:white;
+
+        }
+    </style>
     <!--내비게이션(2)-->
     <style></style>
     <!--본문-->
@@ -105,6 +122,12 @@
                 </ul>
             </div>
         </div>
+        <nav id="top_gnb">
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+        </nav>
     </div>
 </body>
 </html>
