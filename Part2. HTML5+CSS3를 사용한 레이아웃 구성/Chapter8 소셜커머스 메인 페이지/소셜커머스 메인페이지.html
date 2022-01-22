@@ -47,6 +47,39 @@
       }
     </style>
     <!--내비게이션_위-->
+    <style>
+      #top_gnb{
+        overflow:hidden;
+      }
+      div.menu{
+        float:left;
+        width:140px; height: 50px;
+        background:url('top_gnb.png');
+      }
+      #top_gnb>div.item_1{background-position:0px 0px;}
+      #top_gnb>div.item_2{background-position:0px -50px;}
+      #top_gnb>div.item_3{background-position:0px -100px;}
+      #top_gnb>div.item_4{background-position:0px -150px;}
+      #top_gnb>div.item_5{background-position:0px -200px;}
+      #top_gnb>div.item_6{background-position:0px -250px;}
+      #top_gnb>div.item_7{background-position:0px -300px;}
+      
+      #top_gnb>div.item_1:hover{background-position: 0px -350px;}
+      #top_gnb>div.item_2:hover{background-position: 0px -400px;}
+      #top_gnb>div.item_3:hover{background-position: 0px -450px;}
+      #top_gnb>div.item_4:hover{background-position: 0px -500px;}
+      #top_gnb>div.item_5:hover{background-position: 0px -550px;}
+      #top_gnb>div.item_6:hover{background-position: 0px -600px;}
+      #top_gnb>div.item_7:hover{background-position: 0px -650px;}
+
+      #top_gnb>div.item_1.active{background-position:0px -350px;}
+      #top_gnb>div.item_2.active{background-position:0px -400px;}
+      #top_gnb>div.item_3.active{background-position:0px -450px;}
+      #top_gnb>div.item_4.active{background-position:0px -500px;}
+      #top_gnb>div.item_5.active{background-position:0px -550px;}
+      #top_gnb>div.item_6.active{background-position:0px -600px;}
+      #top_gnb>div.item_7.active{background-position:0px -650px;}
+    </style>
     <!--내비게이션_아래-->
     <!--목록-->
     <!--본문-->
@@ -75,5 +108,14 @@
       <a><img src ="http://placehold.it/90x160"></a>
       <a><img src ="http://placehold.it/90x160"></a>
     </aside>
+    <nav id="top_gnb">
+      <div class="menu item_1 active"></div>
+      <div class="menu item_2"></div>
+      <div class="menu item_3"></div>
+      <div class="menu item_4"></div>
+      <div class="menu item_5"></div>
+      <div class="menu item_6"></div>
+      <div class="menu item_7"></div>
+    </nav>
 </body>
 </html>
