@@ -15,3 +15,8 @@ ul{list-style:none;}
   background:#263343;
   padding:8px 12px;
 }
+
+.navbar_logo{
+  font-size:24px;
+  color:white;
+}
