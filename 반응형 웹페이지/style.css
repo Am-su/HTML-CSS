@@ -24,3 +24,11 @@ ul{list-style:none;}
 .navbar_logo > i{
   color:orange;
 }
+
+.navbar_menu{
+  display:flex;
+}
+
+.navbar_menu>li{
+  padding:8px 12px;
+}
