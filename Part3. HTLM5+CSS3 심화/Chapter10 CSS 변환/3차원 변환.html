@@ -18,7 +18,7 @@
       width:200px; height:200px;
       position:absolute; left:0; top:0;
       opacity:0.3;
-      
+      backface-visibility:hidden;
     }
     /*옆면*/
     div:nth-child(1){
@@ -40,11 +40,11 @@
 
     /* 윗면과 아랫면 */
     div:nth-child(5){
-      transform:rotateY(90deg) translate3d(0px, 0px, 100px);
+      transform:rotateX(90deg) translate3d(0px, 0px, 100px);
       background:brown;
     }
     div:nth-child(6){
-      transform:rotateY(270deg) translate3d(0px, 0px, 100px);
+      transform:rotateX(270deg) translate3d(0px, 0px, 100px);
       background:pink;
     }
 
