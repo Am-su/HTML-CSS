@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>transition-delay속성</title>
+  <style>
+    #graph{
+      width:610px;
+      border: 3px solid black;
+    }
+    .bar{
+      width:10px;height:60px;
+      background-color:orange;
+      margin:5px;
+
+      /* 색깔은 2초, 너비는 5초동안 바뀜 */
+      transition-property:background-color,width;
+      transition-duration:2s,5s;
+      
+      /* 한번에 입력 가능 */
+      /* transition:background-color 1s ease, width 5s linear 1s; */
+
+
+    }
+    #graph:hover>.bar:nth-child(1){
+      width:100px;
+      background-color:red;
+    }
+    #graph:hover>.bar:nth-child(2){
+      width:300px;
+      background-color:blue;
+    }
+    #graph:hover>.bar:nth-child(3){
+      width:500px;
+      background-color:green;
+    }
+    #graph:hover>.bar:nth-child(4){
+      width:200px;
+      background-color:yellow;
+    }
+    #graph:hover>.bar:nth-child(5){
+      width:400px;
+      background-color:pink;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="graph">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+</body>
+</html>
