@@ -9,3 +9,8 @@
 *.mp3
 *.mp4
 *.png
+
+#ignore fonts
+*.eot
+*.ttf
+*.woff
