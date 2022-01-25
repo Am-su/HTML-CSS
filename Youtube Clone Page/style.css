@@ -8,7 +8,7 @@ a{text-decoration:none;}
 #whole{
     display:flex;
     flex-direction: column;
-    margin:0; padding:0;
+   
 }
 
 #main_header{
@@ -48,6 +48,7 @@ div > #video > video{
     display:flex;
     margin:0; padding:0;
     padding-left:10px;
+    margin-bottom:-15px;
 }
 .tags > li > a{
     padding-right:10px;
@@ -56,7 +57,6 @@ div > #video > video{
 }
 
 .title{
-    margin-top:-20px;
     width:95%;
     position:relative;
 }
@@ -75,8 +75,9 @@ div > #video > video{
 }
 
 .sub_menu{
-    margin-top:-15px;
     border-bottom:1px solid gray;
+    height:80px;
+    margin-top:-20px;
 }
 
 .sub_menu > ul{
@@ -88,43 +89,54 @@ div > #video > video{
     display:flex;
     flex-direction: column;
     align-items:center;
+    color:gray;
 }
 
 .sub_menu > ul > li.active > a{
-    color:blue;
+  color:blue;
 }
 
 .sub_menu > ul > li > a:hover{
     color:blue;
 }
 
-
 .sub_menu > ul > li > a:active{
-    color:blue;
+  color:blue;
 }
+
 .box_big{
     padding-top:5px;
     display:flex;
     justify-content: space-between;
+    align-items:center;
+    border-bottom:1px solid gray;
 }
-.box_big > div.box_small > div.picture > img{
-    width:50px;
+
+.box_big>div.box_small > a{
+  display:flex;
+}
+.box_big > div.box_small > a > div.picture > img{
+    width:60px;
     border-radius:100px;
 }
 
-.box_big>div.box_small{
-    display:flex;
-}
-.box_big > div.box_small > div.maker{
+
+.box_big > div.box_small > a > div.maker{
     padding-left:10px;
     margin-top:-10px;
 }
 
-.box_big > div.box_small > div.maker > div.name{
+.box_big > div.box_small > a >  div.maker > div.name{
     font-weight:bold;
+    color:black;
 }
 
-.box_big > div.box_small > div.maker > div.num_sub{
+.box_big > div.box_small > a > div.maker > div.num_sub{
     color:gray;
-    margin-top:-8px;
+    margin-top:-15px;
+}
+
+.box_big > div.subscribe > a {
+  color:black;
+  font-weight:bold;
 }
