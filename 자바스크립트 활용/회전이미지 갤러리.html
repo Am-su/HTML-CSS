@@ -25,6 +25,24 @@
         }).appendTo('#image_gallery');
       }
       
+      //변수 선언
+      var isMouseDown = false;
+      var originalPosition={x:0, y:0};
+      var originalRotation = {x:0, y:0, z:0};
+      var originalScale = 1.0;
+      var createGalleryPosition = function(){
+        var output='';
+        output +='translateY('+originalPosition.y+'px) ';
+        output += 'rotateY('+originalRotation.y+'deg)';
+        return output;
+      };
+      var createViewportPosition = function(){
+        var output = '';
+        output +='rotateX(-deg) ';
+        output +='scaleX('+originalScale+') ';
+        output += 'scaleY(' +originalScale+ ')';
+        return output;
+      };
 
       //이벤트 연결
     })
