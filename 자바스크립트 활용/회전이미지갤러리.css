@@ -7,3 +7,37 @@ html,body{
   overflow:hidden;
   background:#141414;
 }
+
+.image{
+  /* 태그 중앙 정렬 */
+  width:100px;
+  height: 60px;
+  position:absolute;
+  left:0;
+  top:0;
+
+  /* 모양 지정 */
+  border:3px solid black;
+  box-sizing:border-box;
+  background:url('http://placehold.it/100x60');
+  background-size:100% 100%;
+}
+
+#viewport{
+  transform-style:preserve-3d;
+  -webkit-perspective: 2000px;
+  position:relative;
+  height:100%;
+  transform:rotateX(-10deg);
+}
+
+#image_gallery{
+  width:100px;
+  height:60px;
+  transform-style:preserve-3d;
+  position:absolute;
+  left:50%;
+  top:50%;
+  margin-left:-50px;
+  margin-top:-30px;
+}
