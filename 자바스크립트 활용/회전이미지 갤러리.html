@@ -1,11 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <title>회전 이미지 갤러리</title>
-  <link rel="stylesheet" href="회전이미지갤러리.css">
-  <style>
-
-  </style>
+  <link rel="stylesheet" href="회전이미지갤러리.css"/>
   <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
   <script>
     $(document).ready(function(){
@@ -27,8 +24,8 @@
       
       //변수 선언
       var isMouseDown = false;
-      var originalPosition={x:0, y:0};
-      var originalRotation = {x:0, y:0, z:0};
+      var originalPosition = { x: 0, y: 0 };
+      var originalRotation = { x: 0, y: 0, z: 0 };
       var originalScale = 1.0;
       var createGalleryPosition = function(){
         var output='';
@@ -38,14 +35,51 @@
       };
       var createViewportPosition = function(){
         var output = '';
-        output +='rotateX(-deg) ';
+        output +='rotateX(-10deg) ';
         output +='scaleX('+originalScale+') ';
         output += 'scaleY(' +originalScale+ ')';
         return output;
       };
 
+      createGalleryPosition();
+      createViewportPosition();
+
       //이벤트 연결
-    })
+      $(window).on({
+        mousedown:function(event){
+          isMouseDown = true;
+
+          originalPosition.x = event.screenX;
+          event.preventDefault();
+        },
+        mouseup:function(event){
+          isMouseDown=false;
+          event.preventDefault();
+        },
+        mousemove:function(event){
+          if(isMouseDown){
+            distance = event.screenX - originalPosition.x;
+            originalRotation.y +=distance;
+            originalPosition.y +=distance/3;
+
+            $('#image_gallery').css('transform', createGalleryPosition());
+            $('$viewport').css('transform',createViewportPosition());
+
+            originalPosition.x = event.screenX;
+          }
+          event.preventDefault();
+        },
+        mousewheel: function (event) {
+          var changeScale = originalScale + event.originalEvent.wheelDeltaY / 1000;
+          if (changeScale > 0) {
+            originalScale = changeScale;
+            $('#image_gallery').css('transform', createGalleryPosition());
+            $('#viewport').css('transform', createViewportPosition());
+            event.preventDefault();
+          }
+        }
+      });
+    });
   </script>
 </head>
 <body>
