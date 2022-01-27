@@ -25,7 +25,7 @@ html,body{
 
 #viewport{
   transform-style:preserve-3d;
-  -webkit-perspective: 2000px;
+  perspective: 2000px;
   position:relative;
   height:100%;
   transform:rotateX(-10deg);

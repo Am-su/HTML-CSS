@@ -8,7 +8,26 @@
   </style>
   <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
   <script>
+    $(document).ready(function(){
+      //div 태그 생성
+      for(var i=0;i<200;i++){
+        //변수 선언
+        var output= '';
+        output +='rotateY('+i*20+'deg)';
+        output +='translateY('+i*5+'px)';
+        output += 'translateZ('+310+'px)';
+        
+        //태그 생성
+        $('<div></div>').addClass('image').css({
+          'width':100,
+          'height':60,
+          'transform':output
+        }).appendTo('#image_gallery');
+      }
+      
 
+      //이벤트 연결
+    })
   </script>
 </head>
 <body>
